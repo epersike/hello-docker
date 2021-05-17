@@ -20,6 +20,9 @@ compose.sh - Runs the containers using the docker-compose file.
 
 ## Release History
 
+* 0.0.2
+    * How to update the container without rebuilding the image
+
 * 0.0.1
     * Study in progress
 
