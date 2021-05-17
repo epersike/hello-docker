@@ -14,6 +14,10 @@ build.sh - Builds the application's containers
 run.sh - Runs the containers
 compose.sh - Runs the containers using the docker-compose file.
 
+## Notes
+
+    * docker-compose.dev.yml sets volume to ./src - This means that every time you make some changes in src/app.py you don't need to rebuild and recreate the image, just restart the container and your new code will be running.
+
 ## Release History
 
 * 0.0.1
