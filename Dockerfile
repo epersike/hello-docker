@@ -10,6 +10,6 @@ RUN python3 -m pip install -r requirements.txt
 
 RUN rm requirements.txt
 
-COPY ./src/ ./
+#COPY ./src/ ./
 
 CMD [ "python3", "-m", "flask", "run", "--host=0.0.0.0" ]
