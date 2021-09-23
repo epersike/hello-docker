@@ -4,10 +4,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return("<p>Hello World 3!</p>")
+    return("<p>Hello World 5!</p>")
 
 @app.route("/teste")
-def index():
+def teste():
     return("<p>Online!</p>")
 
 if __name__ == "__main__":

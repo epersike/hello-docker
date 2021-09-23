@@ -1,15 +1,13 @@
-# syntax=docker/dockerfile:1
-
-from python:3.7
+FROM tiangolo/uwsgi-nginx-flask:python3.8
 
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
+COPY ./src /app
 
-RUN python3 -m pip install -r requirements.txt
+COPY ./requirements.txt ./
+
+#RUN apt update && apt -y install cmake
+
+RUN python3 -m pip install --no-cache-dir -r requirements.txt
 
 RUN rm requirements.txt
-
-#COPY ./src/ ./
-
-CMD [ "python3", "-m", "flask", "run", "--host=0.0.0.0" ]
